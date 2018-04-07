@@ -45,7 +45,7 @@ describe Admin::CategoriesController do
       changed_attributes = {:name => "test2", :keywords => "testKey2", :permalink => "general2", :description => "test2Body"}
       post :edit, :id => category.id, :category => changed_attributes
       category = Category.find(category.id)
-      expect(category.name).should eq(changed_attributes[:name])
+      expect(category.keywords).should eq(changed_attributes[:keywords])
     end
     #new spec cases end
 

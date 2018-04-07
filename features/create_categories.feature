@@ -7,14 +7,14 @@ Feature: Write Articles
     Given the blog is set up
     And I am logged into the admin panel
 
-  Scenario: Successfully create categories
+  Scenario: Create categories successfully
     Given I am on the new categories page
     When I fill in "category_name" with "Foobar"
-    And I fill in "category_keywords" with "Lorem Ipsum"
-    And I fill in "category_permalink" with "FF"
-    And I fill in "category_description" with "test description"
+    And I fill in "category_keywords" with "keywords"
+    And I fill in "category_permalink" with "DD"
+    And I fill in "category_description" with "desc"
     And I press "Save"
     Then I should see "Foobar"
     When I follow "Foobar"
-    Then I should see "Lorem Ipsum"
-    Then I should see "FF"
+    Then I should see "keywords"
+    Then I should see "DD"
